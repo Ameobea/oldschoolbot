@@ -1195,16 +1195,16 @@ export const skillCapes = {
 
 export const collectionLogTypes = [
 	{
-		name: 'Overall',
+		name: 'Overall' as const,
 		aliases: ['all', 'overall'],
 		items: removeDuplicatesFromArray(
 			[...Object.values(bosses), ...Object.values(cluesAll), ...Object.values(pets)].flat(
 				Infinity
-			)
+			) as number[]
 		)
 	},
 	{
-		name: 'Boss',
+		name: 'Boss' as const,
 		aliases: ['bosses', 'boss'],
 		items: bosses
 	},
@@ -1254,7 +1254,7 @@ export const collectionLogTypes = [
 		items: cluesRares
 	},
 	{
-		name: 'Pets',
+		name: 'Pets' as const,
 		aliases: ['pet', 'pets'],
 		items: pets
 	},
@@ -1279,3 +1279,7 @@ export const collectionLogTypes = [
 		items: skillCapes
 	}
 ];
+
+type ArrayElementOf<T> = T extends (infer E)[] ? E : never;
+
+export type CollectionLogType = ArrayElementOf<typeof collectionLogTypes>;

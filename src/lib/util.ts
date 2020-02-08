@@ -207,7 +207,7 @@ export function saidYes(content: string) {
 	return newContent === 'y' || newContent === 'yes';
 }
 
-export function removeDuplicatesFromArray(arr: unknown[]) {
+export function removeDuplicatesFromArray<T>(arr: T[]): T[] {
 	return [...new Set(arr)];
 }
 

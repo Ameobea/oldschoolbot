@@ -19,6 +19,7 @@ import createTupleOfItemsFromBank from '../lib/util/createTupleOfItemsFromBank';
 import filterItemTupleByQuery from '../lib/util/filterItemTupleByQuery';
 import { fillTextXTimesInCtx } from '../lib/util/fillTextXTimesInCtx';
 import { Events } from '../lib/constants';
+import { CollectionLogType } from '../lib/collectionLog';
 
 registerFont('./resources/osrs-font.ttf', { family: 'Regular' });
 registerFont('./resources/osrs-font-compact.otf', { family: 'Regular' });
@@ -292,7 +293,11 @@ export default class BankImageTask extends Task {
 		return canvas.toBuffer();
 	}
 
-	async generateCollectionLogImage(collectionLog: Bank, title = '', type: any): Promise<Buffer> {
+	async generateCollectionLogImage(
+		collectionLog: Bank,
+		title = '',
+		type: CollectionLogType
+	): Promise<Buffer> {
 		const canvas = createCanvas(488, 331);
 		const ctx = canvas.getContext('2d');
 		ctx.font = '16px OSRSFontCompact';
