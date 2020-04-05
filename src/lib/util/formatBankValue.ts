@@ -1,12 +1,14 @@
 import { toKMB } from 'oldschooljs/dist/util/util';
 
+const billion = 1_000_000_000;
+
 const formatBankValue = (totalValue: number): string => {
-	if (totalValue < 1e9) {
+	if (totalValue < billion) {
 		return toKMB(totalValue);
 	}
 
 	// Special case if bank value >= 1B: show three decimals
-	let formattedValue = (totalValue / 1e9).toFixed(3);
+	let formattedValue = (totalValue / billion).toFixed(3);
 
 	// Remove trailing zeroes
 	while (
