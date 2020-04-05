@@ -379,7 +379,8 @@ export default class BankImageTask extends Task {
 		const repeaterImage = await canvasImageFromBuffer(bankRepeaterFile);
 		let row = 0;
 
-		for (const items of Object.values(type.items) as number[][]) {
+		const allItems = Array.isArray(type.items) ? [type.items] : Object.values(type.items);
+		for (const items of allItems) {
 			let column = 0;
 
 			if (row > 6) {

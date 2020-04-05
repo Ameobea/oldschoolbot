@@ -1209,47 +1209,47 @@ export const collectionLogTypes = [
 		items: bosses
 	},
 	{
-		name: 'Clue all',
+		name: 'Clue all' as const,
 		aliases: ['clues all', 'clue all'],
 		items: cluesAll
 	},
 	{
-		name: 'Clues Shared',
+		name: 'Clues Shared' as const,
 		aliases: ['shared', 'clues shared', 'clue shared'],
 		items: cluesShared
 	},
 	{
-		name: 'Clues Beginner',
+		name: 'Clues Beginner' as const,
 		aliases: ['beginner', 'clues beginner', 'clue beginner'],
 		items: cluesBeginner
 	},
 	{
-		name: 'Clues Easy',
+		name: 'Clues Easy' as const,
 		aliases: ['easy', 'clues easy', 'clue easy'],
 		items: cluesEasy
 	},
 	{
-		name: 'Clues Medium',
+		name: 'Clues Medium' as const,
 		aliases: ['medium', 'clues medium', 'clue medium', 'med', 'clues med', 'clue med'],
 		items: cluesMedium
 	},
 	{
-		name: 'Clues Hard',
+		name: 'Clues Hard' as const,
 		aliases: ['hard', 'clues hard', 'clue hard'],
 		items: cluesHard
 	},
 	{
-		name: 'Clues Elite',
+		name: 'Clues Elite' as const,
 		aliases: ['elite', 'clues elite', 'clue elite'],
 		items: cluesElite
 	},
 	{
-		name: 'Clues Master',
+		name: 'Clues Master' as const,
 		aliases: ['master', 'clues master', 'clue master'],
 		items: cluesMaster
 	},
 	{
-		name: 'Clues Rare',
+		name: 'Clues Rare' as const,
 		aliases: ['rare', 'clues rare', 'clue rare'],
 		items: cluesRares
 	},
@@ -1259,22 +1259,22 @@ export const collectionLogTypes = [
 		items: pets
 	},
 	{
-		name: 'Champion scroll',
+		name: 'Champion scroll' as const,
 		aliases: ['champion scrolls', 'champion scroll', 'scroll', 'scrolls'],
 		items: championScrolls
 	},
 	{
-		name: 'Holiday',
+		name: 'Holiday' as const,
 		aliases: ['holiday', 'holidays'],
 		items: holiday
 	},
 	{
-		name: 'Diango',
+		name: 'Diango' as const,
 		aliases: ['diango', 'dailies', 'daily'],
 		items: diangoCollectionLog
 	},
 	{
-		name: 'Skill capes',
+		name: 'Skill capes' as const,
 		aliases: ['skill capes', 'skill cape', 'skillcapes', 'skillcape'],
 		items: skillCapes
 	}
